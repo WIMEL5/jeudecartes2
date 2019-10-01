@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Carte business object -->
+   <bean id="carteBo" class="com.khalid.carte.bo.impl.CarteBoImpl" >
+   		<property name="carteDao" ref="carteDao" />
+   </bean>
+ 
+   <!-- Carte Data Access Object -->
+   <bean id="carteDao" class="com.khalid.carte.dao.impl.CarteDaoImpl" >
+   		<property name="sessionFactory" ref="sessionFactory"></property>
+   </bean>
+   
+   		
+</beans>
